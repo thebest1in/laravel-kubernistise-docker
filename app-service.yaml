@@ -1,0 +1,17 @@
+apiVersion: v1
+kind: Service
+metadata:
+  annotations:
+    kompose.cmd: C:\Users\predator\Desktop\kubrnet wprss\kompose-windows-amd64.exe convert
+    kompose.version: 1.28.0 (c4137012e)
+  name: app
+spec:
+  ports:
+    - name: "8080"
+      port: 8080
+      targetPort: 80
+  selector:
+    io.kompose.service: app
+status:
+  loadBalancer: {}
+
